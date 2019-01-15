@@ -1,0 +1,57 @@
+// Styling for the masthead
+.bg-img {
+    background-image: url('../img/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+  }
+
+.bg-img-parallax {
+    background-image: url('../img/header-bg.jpg');
+    height: 60vh; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.bg-video {
+    position: relative;
+    background-color: black;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      z-index: 1;
+    }
+  }
+  @media (pointer: coarse) and (hover: none) {
+    .bg-video {
+      background: url('/img/youtube.jpg') black no-repeat center top scroll;
+    }
+    .bg-video video {
+      display: none;
+    }
+  }
+
+ 

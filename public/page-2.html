@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="img/favicon.png" rel="icon" type="image/x-icon" />
+    <meta name="google-site-verification" content="ZD4OObUOclRm4XtYkeZdkqzODnVCWZuJO2Zf2NpmewE" />
+
+    <title>Isobar</title>
+
+    <!-- Plugins-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://idangero.us/swiper/dist/css/swiper.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.3/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.min.css" rel="stylesheet">
+
+    <script>
+      // Picture element HTML5 shiv https://scottjehl.github.io/picturefill/
+      document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
+
+  </head>
+
+<body id="page-top">
+
+  
+    <div :class="{'bg-blue p-6': !scrolled, 'bg-black px-6 py-3': scrolled}" class="fixed pin-t w-full z-100 trans"  id="app">
+        <nav class="flex items-center justify-between flex-wrap">
+          <div class="flex items-center flex-no-shrink text-white mr-6">
+            <a class="text-white no-underline" href="\">
+                <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
+            </a>
+          </div>
+          <div class="block sm:hidden">
+            <button @click="toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+          </div>
+          <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+            <div id="nav-links" class="text-sm sm:flex-grow">
+              <a v-for="item in items" :href="item.url" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
+                  {{ item.message }}
+              </a>
+            </div>
+            <div>
+              <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 sm:mt-0">Download</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <header class="text-white">
+            <div class="swiper-overlay-text absolute flex-grow flex flex-col justify-center pin z-10">
+                <div class="text-center">
+                    <h3 class="">Tailwind CSS.</h3>
+                    <p class="sm:mt-4">
+                        Tailwind is a utility-first CSS framework for rapidly building custom user interfaces.
+                    </p>
+                </div>
+            </div>
+
+          <!-- Swiper -->
+          <div class="swiper-container-hero">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide bg-purple-darker">Slide 1</div>
+                <div class="swiper-slide bg-grey">Slide 2</div>
+                <div class="swiper-slide bg-purple-darker">Slide 3</div>
+                <div class="swiper-slide bg-grey">Slide 4</div>
+                <div class="swiper-slide bg-purple-darker">Slide 5</div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination-hero text-center"></div>
+                <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+          </div>
+              
+        </header>
+
+        <section class="p-8 bg-grey-lightest">
+            <h2 class="leading-tight text-center text-black lg:py-8">
+              <small class="block uppercase tracking-wide text-grey-dark text-sm leading-loose">Features</small>
+              Hide on small and show swiper.
+            </h2>
+            <div class="px-2 sm:hide">
+                <div class="flex -mx-2">
+                  <div class="w-1/3 px-2">
+                    <div class="bg-grey-light h-12 mb-5"></div>
+                    <p>
+                      <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
+                      part of a bigger picture.
+                    </p>
+                  </div>
+                  <div class="w-1/3 px-2">
+                    <div class="bg-grey h-12 mb-5"></div>
+                    <p>
+                      <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
+                      part of a bigger picture.
+                    </p>
+                  </div>
+                  <div class="w-1/3 px-2">
+                    <div class="bg-grey-light h-12 mb-5"></div>
+                    <p>
+                      <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
+                      part of a bigger picture.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+        </section>
+
+
+  <!-- Swiper -->
+  <div class="swiper-container hide sm:show">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-grey-light">Slide 1</div>
+        <div class="swiper-slide bg-grey-light">Slide 2</div>
+        <div class="swiper-slide bg-grey-light">Slide 3</div>
+        <div class="swiper-slide bg-grey-light">Slide 4</div>
+        <div class="swiper-slide bg-grey-light">Slide 5</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+  </div>
+
+
+  <section>
+    <div class="container mx-auto">
+      <div class="flex-grow flex flex-col justify-center text-center my-8">
+        <h4>picturefill.js</h4>
+      <picture>
+        <source srcset="https://via.placeholder.com/1200x200" media="(min-width: 1200px)">
+        <source srcset="https://via.placeholder.com/800x200" media="(min-width: 800px)">
+        <img src="https://via.placeholder.com/150x150" alt="My amazing peace pie at the appropriate dimension!">
+    </picture>
+    </div>
+  </div>
+  </section>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.3/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+
+    <script src="js/main.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="vue/app.js"></script>
+  
+  
+
+  </body>
+
+</html>
