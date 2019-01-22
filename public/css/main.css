@@ -1,12 +1,16 @@
 /*!
- * Start Bootstrap - Isobar v4.1.1 (https://www.isobar.com/au/en/)
- * Copyright 2013-2019 Isobar Dev Studio
- * Licensed under MIT (https://github.com/BlackrockDigital/Isobar-Dev-Studio/blob/master/LICENSE)
+ * Template - Isobar v4.1.1 (https://www.isobar.com/au/en/)
+ * 2019-2019 Isobar Dev Studio
+ * Licensed under MIT (Isobar-Dev-Studio/blob/master/LICENSE)
  */
 body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+[v-cloak] {
+  display: none;
 }
 
 .trans {

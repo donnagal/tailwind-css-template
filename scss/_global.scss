@@ -3,6 +3,8 @@ body {
   overflow-x: hidden;
  }
 
+ [v-cloak] { display: none; }
+ 
 .trans { transition: all 0.5s ease;}
 .z-100 { z-index: 100; }
 .hide { display: none; }

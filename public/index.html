@@ -2,37 +2,13 @@
 <html lang="en">
 
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="img/favicon.png" rel="icon" type="image/x-icon" />
-    <meta name="google-site-verification" content="ZD4OObUOclRm4XtYkeZdkqzODnVCWZuJO2Zf2NpmewE" />
-
-    <title>Template</title>
-
-    <!-- Plugins-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://idangero.us/swiper/dist/css/swiper.min.css' rel='stylesheet'>
-    <link href="https://unpkg.com/aos@2.3.3/dist/aos.css" rel="stylesheet">
-
-
-    <!-- Custom styles for this template -->
     <link href="css/main.min.css" rel="stylesheet">
-
-    <script>
-      // Picture element HTML5 shiv https://scottjehl.github.io/picturefill/
-      document.createElement( "picture" );
-    </script>
-    <script src="picturefill.js" async></script>
-
   </head>
 
 <body id="page-top">
 
-  <div :class="{'bg-blue p-6': !scrolled, 'bg-black px-6 py-3': scrolled}" class="fixed pin-t w-full z-100 trans"  id="app">
+  <div :class="{'bg-blue p-6': !scrolled, 'bg-black px-6 py-3': scrolled}" class="v-cloak fixed pin-t w-full z-100 trans"  id="app">
       <nav class="flex items-center justify-between flex-wrap">
         <div class="flex items-center flex-no-shrink text-white mr-6">
           <a class="text-white no-underline" href="\">
@@ -46,7 +22,7 @@
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
           <div id="nav-links" class="text-sm sm:flex-grow">
-            <a v-for="item in items" :href="item.url" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
+            <a v-for="item in items" :href="item.url" class="v-cloak load no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
                 {{ item.message }}
             </a>
           </div>
@@ -59,8 +35,8 @@
 
 
     <header class="bg-img h-screen bg-purple-darker text-white bg-scroll">
-        <div class="container flex flex-col h-full mx-auto">
-          <div class="flex-grow flex flex-col justify-center text-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="load container flex flex-col h-full mx-auto">
+          <div class="flex-grow flex flex-col justify-center text-center">
               <h1 class="text-5xl">Tailwind CSS Template</h1>
               
             <p class="sm:mt-4">
@@ -356,85 +332,11 @@
         </div>
   
       </section>
-      <footer class="bg-purple-darkest p-8 text-grey text-xs md:flex md:flex-wrap">
-        <div class="container mx-auto max-w-lg md:flex md:flex-wrap lg:max-w-xl">
-          <section class="mt-4 md:w-1/4 md:mt-8">
-            <p>
-              &copy; Copyright 2018 Aheenam.
-            </p>
-            <p class="mt-4">
-              <a href="#" class="no-underline text-white inline-block mr-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    class="w-6 h-6 text-white fill-none stroke-current"
-                    stroke-width="1"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-              <a href="#" class="no-underline text-white inline-block m-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="w-6 h-6 text-white fill-none stroke-current"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-                </svg>
-              </a>
-              <a href="#" class="no-underline text-white inline-block m-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="w-6 h-6 text-white fill-none stroke-current"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
-                </svg>
-              </a>
-            </p>
-          </section>
-          <section class="my-8 md:w-1/4">
-            <h2 class="uppercase tracking-wide text-grey text-sm font-normal">Company</h2>
-            <ul class="list-reset text-sm">
-              <li class="my-2"><a class="text-white no-underline" href="#">About</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Blog</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Careers</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Press</a></li>
-            </ul>
-          </section>
-          <section class="my-8 md:w-1/4">
-            <h2 class="uppercase tracking-wide text-grey text-sm font-normal">Product</h2>
-            <ul class="list-reset text-sm">
-              <li class="my-2"><a class="text-white no-underline" href="#">Features</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Tour</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Pricing</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Screencasts</a></li>
-            </ul>
-          </section>
-          <section class="my-8 md:w-1/4">
-            <h2 class="uppercase tracking-wide text-grey text-sm font-normal">Legal</h2>
-            <ul class="list-reset text-sm">
-              <li class="my-2"><a class="text-white no-underline" href="#">Terms</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Legal information</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Privacy</a></li>
-              <li class="my-2"><a class="text-white no-underline" href="#">Support</a></li>
-            </ul>
-          </section>
-        </div>
-      </footer>
+
+      <div id="footer"></div>
+  
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <script src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.3/dist/aos.js"></script>
@@ -445,9 +347,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
     <script src="vue/app.js"></script>
-  
-  
-
   </body>
 
 </html>
