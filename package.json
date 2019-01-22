@@ -1,6 +1,6 @@
 {
-    "title": "Isobar",
-    "name": "Isobar-Dev-Studio",
+    "title": "Template for Tailwind",
+    "name": "Template for Tailwind",
     "version": "4.1.1",
     "description": "Template for Tailwind.",
     "keywords": [
@@ -11,9 +11,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://www.isobar.com/au/en/",
+    "homepage": "https://tailwind-css-template.netlify.com/",
     "license": "MIT",
-    "author": "Isobar Dev Studio",
+    "author": "Donna Galletta",
     "contributors": [
         "Donna Galletta"
     ],
