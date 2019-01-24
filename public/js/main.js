@@ -15,6 +15,8 @@ $(function () {
 
   AOS.init();
 
+  $(window).trigger('resize');
+
   //Video Poster image
   $('.play').click(function() {
     video = '<iframe src="' + $(this).attr('data-video') + '"></iframe>';
