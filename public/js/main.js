@@ -22,6 +22,9 @@ $(function() {
 
 });
     
+$(window).on('load', function() {
+  AOS.refresh();
+});
 
 (function($) {
 "use strict"; // Start of use strict
@@ -68,4 +71,3 @@ $(function() {
 
 
   
-
