@@ -13,32 +13,51 @@ var swiper = new Swiper('.swiper-container-hero', {
 });
 
 
+var swiper = new Swiper('.swiper-container', {
+  // Default parameters
+  slidesPerView: 3,
+  spaceBetween: 20,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is <= 320px
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 10
+    },
+    // when window width is <= 480px
+    480: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+      centeredSlides: true,
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+    },
+    // when window width is <= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+    }
+  }
+})
 
+// if ($(window).width() < 760) {
+//   //Small
+//   var swiper = new Swiper('.swiper-container', {
+//     slidesPerView: 1.5,
+//     spaceBetween: 15,
+//     centeredSlides: true,
+//     pagination: '.swiper-pagination',
+//     paginationClickable: true,
+//   });
+// }
+// else {
+// //Large
+//   var swiper = new Swiper('.swiper-container', {
+//     slidesPerView: 3,
+//     spaceBetween: 20,
+//     preventInteractionOnTransition: true,
+//   });
+// }
 
-if ($(window).width() < 760) {
-  //Small
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1.5,
-    spaceBetween: 15,
-    centeredSlides: true,
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-  });
-}
-else {
-//Large
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    preventInteractionOnTransition: true,
-  });
-}
-
-$(window).bind('resize', function(e)
-{
-  if (window.RT) clearTimeout(window.RT);
-  window.RT = setTimeout(function()
-  {
-    this.location.reload(false); /* false to get page from cache */
-  }, 1);
-});

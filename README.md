@@ -6,7 +6,7 @@ Site demo `https://tailwind-css-template.netlify.com/`
 
 ## Preview
 
-[![Preview](https://images.unsplash.com/photo-1533324416070-5678d4e9dc56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)](https://tailwind-css-template.netlify.com/)
+[![Preview](https://tailwind-css-template.netlify.com/img/demo.jpg)](https://tailwind-css-template.netlify.com/)
 
 **[View Live Preview](https://tailwind-css-template.netlify.com/)**
 
