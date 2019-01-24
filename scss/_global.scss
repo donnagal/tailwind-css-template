@@ -1,6 +1,5 @@
 body { 
   @include body-font;
-  overflow-x: hidden;
  }
 
  [v-cloak] { display: none; }
