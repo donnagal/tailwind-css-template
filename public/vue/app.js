@@ -29,6 +29,7 @@ var app = new Vue({
   })
 
 
+
   //Google doc post
 
   var sheetUrl = 'https://spreadsheets.google.com/feeds/list/1bHhmIdcg7oTCC7ehYo3f7nK6bfPgqLIvcPo-Zx6Sxfs/1/public/values?alt=json'

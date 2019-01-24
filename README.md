@@ -4,6 +4,12 @@ After downloading, simply edit the HTML and Sass files included with the templat
 Framework is using `https://tailwindcss.com/`
 Site demo `https://tailwind-css-template.netlify.com/`
 
+## Preview
+
+[![Preview](https://images.unsplash.com/photo-1533324416070-5678d4e9dc56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)](https://tailwind-css-template.netlify.com/)
+
+**[View Live Preview](https://tailwind-css-template.netlify.com/)**
+
 ### Advanced Usage
 
 After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.

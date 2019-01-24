@@ -1,7 +1,7 @@
 /*!
- * Template - Isobar v4.1.1 (https://www.isobar.com/au/en/)
- * 2019-2019 Isobar Dev Studio
- * Licensed under MIT (Isobar-Dev-Studio/blob/master/LICENSE)
+ * Template - Template for Tailwind v4.1.1 (https://tailwind-css-template.netlify.com/)
+ * 2019-2019 Donna Galletta
+ * Licensed under MIT (Template for Tailwind/blob/master/LICENSE)
  */
 body {
   font-family: 'Montserrat', sans-serif;
@@ -79,14 +79,15 @@ body {
 }
 
 .bg-img {
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("https://images.unsplash.com/photo-1476067897447-d0c5df27b5df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: bottom left;
+  background-size: cover;
 }
 
 .bg-img-parallax {
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("https://images.unsplash.com/photo-1476067897447-d0c5df27b5df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
   height: 60vh;
   background-attachment: fixed;
   background-position: center;
@@ -137,7 +138,7 @@ body {
 }
 
 .swiper-container-hero, .swiper-overlay-text {
-  height: 700px;
+  height: 90vh;
 }
 
 .swiper-pagination-hero {
@@ -147,7 +148,7 @@ body {
 }
 
 .swiper-button-prev, .swiper-button-next {
-  top: 33%;
+  top: 53% !important;
   margin: auto 2rem;
 }
 

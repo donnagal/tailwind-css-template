@@ -4,54 +4,47 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link href="css/main.min.css" rel="stylesheet">
+    <link href='https://idangero.us/swiper/dist/css/swiper.min.css' rel='stylesheet'>
   </head>
 
 <body id="page-top">
 
-  <div :class="{'bg-blue p-6': !scrolled, 'bg-black px-6 py-3': scrolled}" class="v-cloak fixed pin-t w-full z-100 trans"  id="app">
-    <nav class="flex items-center justify-between flex-wrap">
-      <div class="flex items-center flex-no-shrink text-white mr-6">
-        <a class="text-white no-underline" href="\">
-            <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-        </a>
-      </div>
-      <div class="block sm:hidden">
-        <button @click="toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-        </button>
-      </div>
-      <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
-        <div id="nav-links" class="text-sm sm:flex-grow">
-          <a v-for="item in items" :href="item.url" class="v-cloak load no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
-              {{ item.message }}
-          </a>
-        </div>
-        <div>
-          <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 sm:mt-0">Download</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+<div id="nav"></div>
 
-      <header class="text-white load">
+      <header class="text-white">
             <div class="swiper-overlay-text absolute flex-grow flex flex-col justify-center pin z-10">
-                <div class="text-center">
+                <div class="load text-center">
                     <h3 class="">Tailwind CSS.</h3>
                     <p class="sm:mt-4">
                         Tailwind is a utility-first CSS framework for rapidly building custom user interfaces.
                     </p>
                 </div>
             </div>
-            </header>
+        </header>
 
           <!-- Swiper -->
-          <div class="swiper-container-hero">
+          <div class="load swiper-container-hero">
               <div class="swiper-wrapper">
-                <div class="swiper-slide bg-purple-darker">Slide 1</div>
-                <div class="swiper-slide bg-grey">Slide 2</div>
-                <div class="swiper-slide bg-purple-darker">Slide 3</div>
-                <div class="swiper-slide bg-grey">Slide 4</div>
-                <div class="swiper-slide bg-purple-darker">Slide 5</div>
+                <div class="swiper-slide bg-purple-darker bg-cover" 
+                  style="background-image: url('https://images.unsplash.com/photo-1476067897447-d0c5df27b5df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+                  Slide 1
+                </div>
+                <div class="swiper-slide bg-grey bg-cover bg-bottom"
+                  style="background-image: url('https://images.unsplash.com/photo-1533406769131-59d4155f3720?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80');">
+                  Slide 2
+                </div>
+                <div class="swiper-slide bg-purple-darker bg-cover"
+                  style="background-image: url('https://images.unsplash.com/photo-1531986627054-7f294d095acd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+                  Slide 3
+                </div>
+                <div class="swiper-slide bg-grey bg-cover bg-bottom"
+                  style="background-image: url('https://images.unsplash.com/photo-1449130015084-2d48a345ae62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80');">
+                  Slide 4
+                </div>
+                <div class="swiper-slide bg-purple-darker bg-cover bg-top"
+                  style="background-image: url('https://images.unsplash.com/photo-1543766687-d7031c855c00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80');">
+                Slide 5
+              </div>
               </div>
               <!-- Add Pagination -->
               <div class="swiper-pagination-hero text-center"></div>
@@ -59,56 +52,53 @@
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
           </div>
-          </div>
+
               
         </header>
 
+
+
         <section class="p-8 bg-grey-lightest">
-            <h2 class="leading-tight text-center text-black lg:py-8">
+            <h2 class="leading-tight text-center text-black py-8">
               <small class="block uppercase tracking-wide text-grey-dark text-sm leading-loose">Features</small>
               Hide on small and show swiper.
             </h2>
-            <div class="px-2 sm:hide">
-                <div class="flex -mx-2">
-                  <div class="w-1/3 px-2">
-                    <div class="bg-grey-light h-12 mb-5"></div>
-                    <p>
-                      <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
-                      part of a bigger picture.
-                    </p>
-                  </div>
-                  <div class="w-1/3 px-2">
-                    <div class="bg-grey h-12 mb-5"></div>
-                    <p>
-                      <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
-                      part of a bigger picture.
-                    </p>
-                  </div>
-                  <div class="w-1/3 px-2">
-                    <div class="bg-grey-light h-12 mb-5"></div>
-                    <p>
-                      <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
-                      part of a bigger picture.
-                    </p>
-                  </div>
+            <div class="container mx-auto px-2">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide bg-grey-light">
+                        <article class="my-8 text-center">
+                            <img src="https://images.unsplash.com/photo-1547010364-858c5b011e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+                          <p class="mt-4">
+                            <strong>No information overload.</strong> Just learn about things you need to know to solve a specific task.
+                          </p>
+                        </article>
+                      </div>
+                      <div class="swiper-slide bg-grey-light">
+                          <article class="my-8 text-center">
+                              <img src="https://images.unsplash.com/photo-1547010364-858c5b011e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+                            <p class="mt-4">
+                              <strong>No information overload.</strong> Just learn about things you need to know to solve a specific task.
+                            </p>
+                          </article>
+                      </div>
+                      <div class="swiper-slide bg-grey-light">
+                          <article class="my-8 text-center">
+                              <img src="https://images.unsplash.com/photo-1547010364-858c5b011e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+                            <p class="mt-4">
+                              <strong>No information overload.</strong> Just learn about things you need to know to solve a specific task.
+                            </p>
+                          </article>
+                      </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
-              </div>
-              
+            </div>
         </section>
 
 
-  <!-- Swiper -->
-  <div class="swiper-container hide sm:show">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide bg-grey-light">Slide 1</div>
-        <div class="swiper-slide bg-grey-light">Slide 2</div>
-        <div class="swiper-slide bg-grey-light">Slide 3</div>
-        <div class="swiper-slide bg-grey-light">Slide 4</div>
-        <div class="swiper-slide bg-grey-light">Slide 5</div>
-      </div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination"></div>
-  </div>
 
 
   <section>
@@ -124,11 +114,25 @@
   </div>
   </section>
 
+
+  <div class="container mx-auto px-2">
+      <div class="flex flex-wrap text-center">
+          <div class="w-full my-12">
+            <div class="sm:hide">
+                Show on lg and hide on small
+              </div>
+              <div class="hide sm:show">
+                Show on Small Only
+              </div>
+          </div>
+        </div>
+    </div>
+
+
     <!-- Plugin JavaScript -->
+        <script src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <script src="https://idangero.us/swiper/dist/js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.3/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
 
@@ -136,8 +140,7 @@
     <script src="js/swiper.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-    <script src="vue/app.js"></script>
-  
+
   
 
   </body>

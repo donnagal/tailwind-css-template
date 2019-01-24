@@ -8,30 +8,7 @@
 
 <body id="page-top">
 
-  <div :class="{'bg-blue p-6': !scrolled, 'bg-black px-6 py-3': scrolled}" class="v-cloak fixed pin-t w-full z-100 trans"  id="app">
-      <nav class="flex items-center justify-between flex-wrap">
-        <div class="flex items-center flex-no-shrink text-white mr-6">
-          <a class="text-white no-underline" href="\">
-              <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-          </a>
-        </div>
-        <div class="block sm:hidden">
-          <button @click="toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-          </button>
-        </div>
-        <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
-          <div id="nav-links" class="text-sm sm:flex-grow">
-            <a v-for="item in items" :href="item.url" class="v-cloak load no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4">
-                {{ item.message }}
-            </a>
-          </div>
-          <div>
-            <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 sm:mt-0">Download</a>
-          </div>
-        </div>
-      </nav>
-    </div>
+    <div id="nav"></div>
 
 
     <header class="bg-img h-screen bg-purple-darker text-white bg-scroll">
@@ -43,7 +20,7 @@
                 Tailwind is a utility-first CSS framework for rapidly building custom user interfaces.
             </p>
             <footer class="sm:mt-4">
-                <a href="#1" class="js-scroll-trigger inline-block px-8 py-4 my-4 bg-purple rounded text-white no-underline tracking-wide
+                <a href="#1" class="inline-block px-8 py-4 my-4 bg-purple rounded text-white no-underline tracking-wide
                   font-medium hover:bg-purple-light">
                   Scroll Button
                 </a>
@@ -94,9 +71,9 @@
                         
                       </p>
                       <div class="embed-responsive embed-responsive-16by9 bg-black">
-                          <img class="play embed-responsive-item" src="img/youtube.jpg" 
+                          <img class="play embed-responsive-item" src="img/video-placehoder.jpg" 
                           data-video="https://www.youtube.com/embed/_SglEZKFZxY?autoplay=1" allowfullscreen>
-                      </div>
+                        </div>
                 </div>
               </div>
           </div>
@@ -104,22 +81,27 @@
 
 
         <section class="p-8 bg-img-parallax">
-            <div class="container mx-auto">
-                <div class="flex-grow flex flex-col justify-center text-center text-white">
-                  <div class="w-full sm:w-full md:w-3/4 lg:w-3/4 xl:w-3/4 mx-auto lg:py-24">
-                      <h3 class="text-2xl font-medium">Title</h3>
-                      <p class="leading-loose pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, assumenda officiis ullam, accusantium maxime modi cupiditate unde ipsum facere esse deleniti consectetur, quo quibusdam ab itaque numquam cum tempore. Facere?</p>
-                      <p class="leading-loose pb-5">Facere minima facilis consectetur voluptatum, dicta, necessitatibus earum laborum maiores rem praesentium eligendi enim? Earum harum delectus sed velit officiis, dicta impedit reprehenderit quo minima quos quod aliquam explicabo eligendi?</p>
-                      <p class="leading-loose pb-5">Ipsa nesciunt atque inventore necessitatibus maiores incidunt sapiente consequuntur velit nostrum illum praesentium, saepe suscipit fugiat porro doloribus autem asperiores, sint, eos aut mollitia reprehenderit vel iste blanditiis? Architecto, earum?</p>
-                  </div>
+            <div class="load container flex flex-col h-full mx-auto">
+                <div class="flex-grow flex flex-col justify-center text-white text-center">
+                    <h1 class="text-5xl">Tailwind CSS Template</h1>
+                    
+                  <p class="sm:mt-4">
+                      Tailwind is a utility-first CSS framework for rapidly building custom user interfaces.
+                  </p>
+                  <footer class="sm:mt-4">
+                      <a href="#1" class="inline-block px-8 py-4 my-4 bg-purple rounded text-white no-underline tracking-wide
+                        font-medium hover:bg-purple-light">
+                        Scroll Button
+                      </a>
+                  </footer>
                 </div>
-            </div>
+              </div>
           </section>
 
 
       <section class="bg-grey-lightest md:flex" data-aos="fade-up" data-aos-duration="1000">
         <div class="md:w-1/2">
-          <img src="img/a.jpg" alt="" class="block">
+          <img src="https://images.unsplash.com/photo-1449130015084-2d48a345ae62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80" alt="" class="block">
         </div>
         <article class="p-8 max-w-sm md:flex md:flex-col md:justify-center lg:px-32 lg:max-w-md">
           <h2 class="leading-tight">
@@ -139,23 +121,23 @@
                 <small class="block uppercase tracking-wide text-purple text-sm leading-loose md:mb-2">
                   Better Communication
                 </small>
-                Give and get feedback on what you do
+                Give and get feedback
               </h2>
               <p class="mt-2 text-purple-lightest">
-                Your whole team can help you improving your results by commenting on what you have done.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               </p>
               <p class="mt-2">
                 <a href="#" class="block bg-purple-lightest rounded px-6 py-4 text-center uppercase tracking-wide
                   no-underline font-medium text-purple-darkest hover:bg-white
                   md:inline-block md:mt-8">
-                  Read the docs
+                 Demo button
                 </a>
               </p>
             </article>
         </div>
       </section>
 
-      <section id="1" class="p-8" data-aos="fade-up" data-aos-duration="1000">
+      <section id="1" class="p-8" data-aos="fade-up">
         <div class="container mx-auto">
           <article class="max-w-sm md:py-8 lg:py-32 lg:max-w-md">
             <h2 class="block uppercase tracking-wide text-grey-dark text-sm leading-loose">People love it</h2>
@@ -172,7 +154,7 @@
         </div>
       </section>
 
-      <section class="p-8 bg-grey-lightest" data-aos="fade-up" data-aos-duration="1000">
+      <section class="p-8 bg-grey-lightest" data-aos="fade-up">
         <h2 class="leading-tight text-center text-black lg:py-8">
           <small class="block uppercase tracking-wide text-grey-dark text-sm leading-loose">Features</small>
           Everything your team needs
@@ -180,67 +162,27 @@
         <div class="container mx-auto">
           <div class="sm:flex sm:flex-wrap">
             <article class="my-8 text-center sm:w-1/2 sm:px-4 lg:w-1/4">
-              <svg
-                class="w-32 h-32 stroke-current fill-none inline-block mb-2 text-purple"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-              </svg>
-              <p>
+                <img src="https://images.unsplash.com/photo-1533324416070-5678d4e9dc56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <p class="mt-4">
                 <strong class="font-medium">Complete Overview.</strong> Always have the projects mission in mind, every single tasks you do is
                 part of a bigger picture.
               </p>
             </article>
             <article class="my-8 text-center sm:w-1/2 sm:px-4 lg:w-1/4">
-              <svg
-                class="w-32 h-32 stroke-current fill-none inline-block mb-2 text-purple"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
-                <line x1="16" y1="8" x2="2" y2="22" />
-                <line x1="17" y1="15" x2="9" y2="15" />
-              </svg>
-              <p>
+                <img src="https://images.unsplash.com/photo-1547010364-858c5b011e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <p class="mt-4">
                 <strong>No information overload.</strong> Just learn about things you need to know to solve a specific task.
               </p>
             </article>
             <article class="my-8 text-center sm:w-1/2 sm:px-4 lg:w-1/4">
-              <svg
-                class="w-32 h-32 stroke-current fill-none inline-block mb-2 text-purple"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-              </svg>
-              <p>
+                <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <p class="mt-4">
                 <strong>Better communication</strong> leads to better results.
               </p>
             </article>
             <article class="my-8 text-center sm:w-1/2 sm:px-4 lg:w-1/4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-32 h-32 stroke-current fill-none inline-block mb-2 text-purple"
-                viewBox="0 0 24 24"
-                stroke-width="1"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <p>
+                <img src="https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+              <p class="mt-4">
                 <strong>24/7 service.</strong> You and your team just work on your team. We take care of keeping your
                 systems up-to-date.
               </p>
@@ -346,7 +288,6 @@
     <script src="js/swiper.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-    <script src="vue/app.js"></script>
   </body>
 
 </html>
