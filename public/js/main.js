@@ -13,7 +13,7 @@ $(function () {
     $("#footer").append(data);
   });
 
-    AOS.init();
+  AOS.init();
 
   //Video Poster image
   $('.play').click(function() {
