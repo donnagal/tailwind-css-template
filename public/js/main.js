@@ -12,7 +12,11 @@ $(function() {
     $("#footer").append(data);
   });
 
-  AOS.init();
+  AOS.init(
+    {
+      disable: 'mobile',
+    }
+  );
 
   //Video Poster image
   $('.play').click(function() {
@@ -21,10 +25,7 @@ $(function() {
   });
 
 });
-    
-$(window).on('load', function() {
-  AOS.refresh();
-});
+
 
 (function($) {
 "use strict"; // Start of use strict
