@@ -2,6 +2,16 @@
 <html lang="en">
 
   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, initial-scale=1, viewport-fit=cover">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link href="img/favicon.png" rel="icon" type="image/x-icon" />
+      <meta name="google-site-verification" content="ZD4OObUOclRm4XtYkeZdkqzODnVCWZuJO2Zf2NpmewE" />
+  
+      <title>Template</title>
+
+
     <link href='https://idangero.us/swiper/dist/css/swiper.min.css' rel='stylesheet'>
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
@@ -47,7 +57,50 @@
     </nav>
   </div>
 
-     
+      <header class="text-white">
+            <div class="swiper-overlay-text absolute flex-grow flex flex-col justify-center pin z-10">
+                <div class="text-center">
+                    <h3 class="">Tailwind CSS.</h3>
+                    <p class="sm:mt-4">
+                        Tailwind is a utility-first CSS framework for rapidly building custom user interfaces.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+          <!-- Swiper -->
+          <div class="load swiper-container-hero">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide bg-purple-darker bg-cover" 
+                  style="background-image: url('https://images.unsplash.com/photo-1476067897447-d0c5df27b5df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+                  1
+                </div>
+                <div class="swiper-slide bg-grey bg-cover bg-bottom"
+                  style="background-image: url('https://images.unsplash.com/photo-1533406769131-59d4155f3720?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80');">
+                 2
+                </div>
+                <div class="swiper-slide bg-purple-darker bg-cover"
+                  style="background-image: url('https://images.unsplash.com/photo-1531986627054-7f294d095acd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+                  3
+                </div>
+                <div class="swiper-slide bg-grey bg-cover bg-bottom"
+                  style="background-image: url('https://images.unsplash.com/photo-1449130015084-2d48a345ae62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1653&q=80');">
+                  4
+                </div>
+                <div class="swiper-slide bg-purple-darker bg-cover bg-top"
+                  style="background-image: url('https://images.unsplash.com/photo-1543766687-d7031c855c00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80');">
+                 5
+              </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination-hero text-center"></div>
+                <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+
+
+
 
         <section class="load py-8 bg-grey-lightest">
 
@@ -94,6 +147,32 @@
 
 
 
+  <section>
+    <div class="container mx-auto">
+      <div class="flex-grow flex flex-col justify-center text-center my-8">
+        <h4>picturefill.js</h4>
+      <picture>
+        <source srcset="https://via.placeholder.com/1200x200" media="(min-width: 1200px)">
+        <source srcset="https://via.placeholder.com/800x200" media="(min-width: 800px)">
+        <img src="https://via.placeholder.com/150x150" alt="My amazing peace pie at the appropriate dimension!">
+    </picture>
+    </div>
+  </div>
+  </section>
+
+
+  <div class="container mx-auto px-2">
+      <div class="flex flex-wrap text-center">
+          <div class="w-full my-12">
+            <div class="sm:hide">
+                Show on lg and hide on small
+              </div>
+              <div class="hide sm:show">
+                Show on Small Only
+              </div>
+          </div>
+        </div>
+    </div>
 
 
     

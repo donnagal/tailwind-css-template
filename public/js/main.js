@@ -3,12 +3,12 @@ $(function() {
   $('.load').css('display', 'none');
   $('.load').fadeIn(2000);
 
-  $.get("__head.html", function (data) {
-      $("head").append(data);
-  });
-  $.get("__nav.html", function (data) {
-    $("#nav").append(data);
-  });
+  // $.get("__head.html", function (data) {
+  //     $("head").append(data);
+  // });
+  // $.get("__nav.html", function (data) {
+  //   $("#nav").append(data);
+  // });
   $.get("__footer.html", function (data) {
     $("#footer").append(data);
   });
