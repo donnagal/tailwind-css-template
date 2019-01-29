@@ -1,7 +1,7 @@
 
 $(function() {
   $('.load').css('display', 'none');
-  $('.load').fadeIn(2000);
+  $('.load').fadeIn(1000);
 
   $.get("__nav.html", function (data) {
     $("#nav").append(data);
@@ -25,20 +25,26 @@ $(function() {
         $("nav").addClass("active");
     } else {
         $("nav").removeClass("active");
-        $('.hamburger-menu').removeClass('animate');
     }
   });
 
-  $("#nav").click(function(){
-    $(".toggle-hidden").slideToggle();
-    $('.hamburger-menu').toggleClass('animate');
-  });
 
+
+
+  //Small only
   if ($(window).width() < 990) {
+
+    $("#nav").click(function(){
+      $(".toggle-hidden").slideToggle();
+      $('.hamburger-menu').toggleClass('animate');
+    });
+
     $(window).scroll(function() {    
       var scroll = $(window).scrollTop();
         $(".toggle-hidden").slideUp();
+        $('.hamburger-menu').removeClass('animate');
     });
+
  }
 
 // refresh on resize
