@@ -36,11 +36,6 @@ body {
   }
 }
 
-nav.active {
-  background: #22292f;
-  padding: 14px 20px;
-}
-
 .embed-responsive {
   cursor: pointer;
   position: relative;
@@ -170,4 +165,65 @@ nav.active {
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: #ef9075;
+}
+
+nav.active {
+  background: #22292f;
+  padding: 14px 20px;
+}
+
+.menu-wrapper {
+  margin: auto;
+  width: 34px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.hamburger-menu,
+.hamburger-menu:after,
+.hamburger-menu:before {
+  width: 34px;
+  height: 3px;
+  position: fixed;
+}
+
+.hamburger-menu {
+  position: relative;
+  transform: translateY(10px);
+  background: white;
+  transition: all 0ms 300ms;
+}
+
+.hamburger-menu.animate {
+  background: rgba(255, 255, 255, 0);
+}
+
+.hamburger-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  background: white;
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background: white;
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hamburger-menu.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }

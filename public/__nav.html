@@ -1,24 +1,24 @@
-<nav class="flex items-center justify-between flex-wrap bg-grey-darker p-6 fixed pin-t w-full z-100 trans text-center">
+<nav class="flex items-center justify-between flex-wrap bg-grey-darker  p-6 fixed pin-t w-full z-100 trans text-center">
         <div class="flex items-center flex-no-shrink text-white mr-6">
           <a target="_blank" href="https://tailwindcss.com/docs/what-is-tailwind/" class="font-semibold text-xl tracking-tight text-white no-underline">Tailwind CSS</a>
         </div>
         <div class="block lg:hidden">
-          <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-          </button>
+            <div class="menu-wrapper">
+                <div class="hamburger-menu"></div>	  
+            </div>
         </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:h-fill toggle-hidden hidden pt-12 lg:pt-0">
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto sm:h-fill toggle-hidden hidden pt-24 lg:pt-0">
           <div class="text-sm lg:flex-grow">
-            <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white lg:mr-24 no-underline">
+            <a href="/" class="block mt-4 lg:inline-block lg:mt-0 mt-12 text-teal-lighter hover:text-white lg:mr-24 no-underline">
               Page 1
             </a>
-            <a href="/page-2.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white lg:mr-24 no-underline">
+            <a href="/page-2.html" class="block mt-4 lg:inline-block lg:mt-0 mt-12 text-teal-lighter hover:text-white lg:mr-24 no-underline">
               Page 2
             </a>
-            <a href="/page-3.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white lg:mr-24 no-underline">
+            <a href="/page-3.html" class="block mt-4 lg:inline-block lg:mt-0 mt-12 text-teal-lighter hover:text-white lg:mr-24 no-underline">
               Page 3
             </a>
-            <a href="/page-4.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:text-white no-underline lg:pb-0 pb-12">
+            <a href="/page-4.html" class="block mt-4 lg:inline-block lg:mt-0 mt-12 text-teal-lighter hover:text-white no-underline lg:pb-0 pb-12">
             Page 4
             </a>
           </div>
@@ -27,3 +27,4 @@
           </div>
         </div>
 </nav>
+

@@ -16,13 +16,6 @@ body {
     .sm\:h-fill { height: -webkit-fill-available; }
 }
 
-// Nav
-nav {
-  &.active {
-    background: #22292f;
-    padding: 14px 20px;
-  }
-}
 
 // Video embed
 .embed-responsive {

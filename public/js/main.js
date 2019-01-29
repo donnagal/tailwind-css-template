@@ -29,6 +29,12 @@ $(function() {
     }
 });
 
+  (function () {
+    $('#nav').on('click', function() {
+      $('.hamburger-menu').toggleClass('animate');
+    })
+  })();
+
   $("#nav").click(function(){
     $(".toggle-hidden").slideToggle();
   });
