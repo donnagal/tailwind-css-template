@@ -23,15 +23,14 @@ $(function() {
 
     if (scroll >= 500) {
         $("nav").addClass("active");
-        $(".toggle-hidden").addClass("hidden");
     } else {
         $("nav").removeClass("active");
-        $(".toggle-hidden").addClass("hidden");
+        $(".toggle-hidden").slideUp();
     }
 });
 
   $("#nav").click(function(){
-    $(".toggle-hidden").toggleClass("hidden");
+    $(".toggle-hidden").slideToggle();
   });
 
 

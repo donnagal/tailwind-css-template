@@ -8,10 +8,12 @@ body {
 .z-100 { z-index: 100; }
 .hide { display: none; }
 
+
 // Small Size
 @media (max-width:  $sm) { 
     .sm\:hide { display: none;}
     .sm\:show {display: block; }
+    .sm\:h-fill { height: -webkit-fill-available; }
 }
 
 // Nav
