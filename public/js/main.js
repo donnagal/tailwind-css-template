@@ -26,17 +26,15 @@ $(function() {
     } else {
         $("nav").removeClass("active");
         $(".toggle-hidden").slideUp();
+        $('.hamburger-menu').removeClass('animate');
     }
 });
 
-  (function () {
-    $('#nav').on('click', function() {
-      $('.hamburger-menu').toggleClass('animate');
-    })
-  })();
+
 
   $("#nav").click(function(){
     $(".toggle-hidden").slideToggle();
+    $('.hamburger-menu').toggleClass('animate');
   });
 
 
