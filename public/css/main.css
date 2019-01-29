@@ -33,6 +33,11 @@ body {
   }
 }
 
+nav.active {
+  background: #22292f;
+  padding: 14px 20px;
+}
+
 .embed-responsive {
   cursor: pointer;
   position: relative;
