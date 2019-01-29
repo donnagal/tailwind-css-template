@@ -25,18 +25,34 @@ $(function() {
         $("nav").addClass("active");
     } else {
         $("nav").removeClass("active");
-        $(".toggle-hidden").slideUp();
         $('.hamburger-menu').removeClass('animate');
     }
-});
-
-
+  });
 
   $("#nav").click(function(){
     $(".toggle-hidden").slideToggle();
     $('.hamburger-menu').toggleClass('animate');
   });
 
+  if ($(window).width() < 990) {
+    $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+        $(".toggle-hidden").slideUp();
+    });
+ }
+
+// refresh on resize
+ $(function($){
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+
+  $(window).resize(function() {
+    if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+      location.reload();
+      return;
+    }
+  });
+});
 
 
   //Video Poster image
