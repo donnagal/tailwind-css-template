@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+  <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, initial-scale=1, viewport-fit=cover">
@@ -24,22 +24,24 @@
       </script>
       <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.js" async></script>
   
-      </head>
+</head>
 
 <body id="page-top">
 
     <div id="nav"></div>
 
-      <section id="blog" class="mt-20 h-screen">
+      <section class="mt-20 h-screen">
           <h2 class="leading-tight text-center text-black py-8">
             <small class="block uppercase tracking-wide text-grey-dark text-sm leading-loose">Features</small>
             This is a vue feed with google docs.
           </h2>
             <div class="container mx-auto px-2">
-                <div class="flex flex-wrap">
+                <div class="flex flex-wrap text-center">
                     <div class="w-full mb-4">
                         <div id="blog">
-                            <div v-for="entry in entries">
+                          <div class="loading absolute pin-x mt-32 text-grey">loading...</div>
+
+                            <div class="p-12" v-for="entry in entries">
                               <h2>{{entry.gsx$title.$t}}</h2>
                               <div v-html="entry.gsx$moretext.$t"></div>
                               <img :src="entry.gsx$imageurl.$t" class="" />

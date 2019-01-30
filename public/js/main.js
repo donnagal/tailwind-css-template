@@ -17,6 +17,8 @@ $(function() {
   );
   
 
+  $('.loading').fadeIn('fast').delay(1000).fadeOut('slow');
+
   //nav
   $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
@@ -27,8 +29,6 @@ $(function() {
         $("nav").removeClass("active");
     }
   });
-
-
 
 
   //Small only
@@ -114,4 +114,4 @@ $(function() {
 
 
 
-  
+
