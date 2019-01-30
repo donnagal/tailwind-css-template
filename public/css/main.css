@@ -16,16 +16,24 @@ body {
   padding: 0;
 }
 
-.trans {
-  transition: all 0.5s ease;
-}
-
 .z-100 {
   z-index: 100;
 }
 
 .hide {
   display: none;
+}
+
+[class^="trans-"] .trans, [class*=" trans-"] .trans {
+  transition: all;
+}
+
+.trans {
+  transition: all 0.5s ease;
+}
+
+.trans-slow {
+  transition-duration: 1s;
 }
 
 @media (max-width: 576px) {
