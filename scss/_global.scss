@@ -2,6 +2,12 @@ body {
   @include body-font;
  }
 
+ .text-9xl {
+   font-size: 5rem;
+ }
+ .animate-add {
+  &.active {  padding: 0; }
+ }
 
 .trans { transition: all 0.5s ease;}
 .z-100 { z-index: 100; }

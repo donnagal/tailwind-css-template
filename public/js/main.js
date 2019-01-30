@@ -19,7 +19,7 @@ $(function() {
     }
   );
   
-
+  //Loading on Blog
   $('.loading').fadeIn('fast').delay(1000).fadeOut('slow');
 
 
@@ -50,6 +50,31 @@ $(function() {
     });
 
  }
+
+    // Background data image
+    $( ".bg-img" ).each(function() {
+      var attr = $(this).attr('data-image-src');
+    
+      if (typeof attr !== typeof undefined && attr !== false) {
+          $(this).css('background', 'url('+attr+') center bottom  / cover no-repeat');
+          
+      }
+    
+    });
+
+
+   //Add animate class
+   $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 10) {
+        $(".animate-add").addClass("active");
+    } else {
+        $(".animate-add").removeClass("active");
+    }
+  });
+
+
 
 // refresh on resize
  $(function($){
