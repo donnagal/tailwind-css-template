@@ -42,9 +42,9 @@
                           <div class="loading absolute pin-x mt-32 text-grey">loading...</div>
 
                             <div class="p-12" v-for="entry in entries">
-                              <h2>{{entry.gsx$title.$t}}</h2>
+                              <h2 class="pb-2">{{entry.gsx$title.$t}}</h2>
                               <div v-html="entry.gsx$moretext.$t"></div>
-                              <img :src="entry.gsx$imageurl.$t" class="" />
+                              <img :src="entry.gsx$imageurl.$t" class="pt-5" />
                             </div>
                     </div>
                   </div>
