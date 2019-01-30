@@ -9,6 +9,9 @@ $(function() {
   $.get("__footer.html", function (data) {
     $("#footer").append(data);
   });
+  $.get("__footer-2.html", function (data) {
+    $("#footer-2").append(data);
+  });
 
   AOS.init(
     {
@@ -18,6 +21,40 @@ $(function() {
   
 
   $('.loading').fadeIn('fast').delay(1000).fadeOut('slow');
+
+
+  // Background Movement 
+    var lFollowX = 0,
+    lFollowY = 0,
+    a = 0,
+    y = 0,
+    friction = 1 / 10;
+
+    function moveBackground() {
+    a += (lFollowX - a) * friction;
+    y += (lFollowY - y) * friction;
+
+    translate = 'translate(' + a + 'px, ' + y + 'px) scale(1.1)';
+
+    $('.bg-move').css({
+    '-webit-transform': translate,
+    '-moz-transform': translate,
+    'transform': translate
+    });
+
+    window.requestAnimationFrame(moveBackground);
+    }
+
+    $(window).on('mousemove click', function(e) {
+
+    var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+    var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+    // lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+    lFollowY = (10 * lMouseY) / 100;
+
+    });
+
+  moveBackground();
 
   //nav
   $(window).scroll(function() {    
@@ -115,3 +152,41 @@ $(function() {
 
 
 
+
+
+  //Request Animation Frame Hook
+//http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+
+(function(window) {
+
+  var prefixes = 'webkit moz ms o'.split(' ');
+  // get unprefixed rAF and cAF, if present
+  var requestAnimationFrame = window.requestAnimationFrame;
+  var cancelAnimationFrame = window.cancelAnimationFrame;
+  // loop through vendor prefixes and get prefixed rAF and cAF
+  var prefix;
+
+  for (var i = 0; i < prefixes.length; i++) {
+      if (requestAnimationFrame && cancelAnimationFrame) {
+          break;
+      }
+      prefix = prefixes[i];
+      requestAnimationFrame = requestAnimationFrame || window[prefix + 'RequestAnimationFrame'];
+      cancelAnimationFrame = cancelAnimationFrame || window[prefix + 'CancelAnimationFrame'] || window[prefix + 'CancelRequestAnimationFrame'];
+  }
+
+  if (!requestAnimationFrame || !cancelAnimationFrame) {
+      requestAnimationFrame = function(callback, element) {
+          window.setTimeout(callback, 1000 / 60);
+      }
+
+      cancelAnimationFrame = function(id) {
+          window.clearTimeout(id);
+      };
+  }
+  // put in global namespace
+  window.requestAnimationFrame = requestAnimationFrame;
+  window.cancelAnimationFrame = cancelAnimationFrame;
+
+
+})(window);
