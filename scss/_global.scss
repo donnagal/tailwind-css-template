@@ -2,9 +2,16 @@ body {
   @include body-font;
  }
 
- .text-9xl {
-   font-size: 5rem;
- }
+
+
+ // Large Size
+@media (min-width:  $sm) { 
+  .lg\:text-9xl {
+    font-size: 5rem;
+  }
+}
+
+
  .animate-add {
   &.active {  padding: 0; }
  }
@@ -83,3 +90,13 @@ body {
     }
   }
   
+
+//Type Animation
+.type {
+  i {
+    width: 2px;
+    height: 1em;
+    background-color: currentColor;
+    margin-left: 0.3rem;
+  }
+}

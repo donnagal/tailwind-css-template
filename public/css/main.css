@@ -8,8 +8,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.text-9xl {
-  font-size: 5rem;
+@media (min-width: 576px) {
+  .lg\:text-9xl {
+    font-size: 5rem;
+  }
 }
 
 .animate-add.active {
@@ -90,6 +92,13 @@ body {
 
 .embed-responsive-1by1::before {
   padding-top: 100%;
+}
+
+.type i {
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 0.3rem;
 }
 
 .bg-g-blue {
