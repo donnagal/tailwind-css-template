@@ -30,16 +30,16 @@
 
     <div id="nav"></div>
 
-      <section class="mt-20 h-screen">
+      <section class="mt-20 pb-32">
           <h2 class="leading-tight text-center text-black py-8">
             <small class="block uppercase tracking-wide text-grey-dark text-sm leading-loose">Features</small>
             This is a vue feed with google docs.
           </h2>
             <div class="container mx-auto px-2">
                 <div class="flex flex-wrap text-center">
-                    <div class="w-full mb-4">
+                    <div class="w-full mb-4" data-aos="fade-up">
                         <div id="blog">
-                          <div class="loading absolute pin-x mt-32 text-grey">loading...</div>
+                          <div class="load-out  mt-32 text-grey h-screen">loading...</div>
 
                             <div class="p-12" v-for="entry in entries">
                               <h2 class="pb-2">{{entry.gsx$title.$t}}</h2>
@@ -52,6 +52,7 @@
               </div>
         </section>
 
+        <div id="footer-2"></div>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -63,6 +64,7 @@
 
     <script src="js/main.min.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/move-image.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
     <script src="vue/app.js"></script>

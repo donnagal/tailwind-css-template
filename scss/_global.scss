@@ -2,8 +2,6 @@ body {
   @include body-font;
  }
 
-
-
  // Large Size
 @media (min-width:  $sm) { 
   .lg\:text-9xl {
